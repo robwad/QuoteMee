@@ -1,0 +1,9 @@
+
+<h1> <%= @author.author_name %> </h1>
+<p>
+   <%= @author.description %>
+</p>
+
+<%= link_to 'Edit', "/authors/#{@author.slug}/edit" %> |
+<%= link_to 'Back', '/authors' %> | 
+<%= link_to 'Delete', "/authors/#{@author.slug}", method: :delete %> |

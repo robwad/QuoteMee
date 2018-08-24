@@ -1,0 +1,14 @@
+<h1>Authors</h1>
+
+
+<% @authors.each do |author| %>
+	<p><%= link_to "/authors/#{author.slug}" do %>
+	<%= author.author_name %>  <br /> <%= author.year_of_birth %> <br /> <%= author.birthplace %> <br />
+	<% end %>
+	</p>
+<% end %>
+<br />
+<br />
+<br />
+<br />
+<%= link_to 'New Author', new_author_path %> | <%= link_to 'Quotes', quotes_path %>
