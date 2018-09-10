@@ -5,6 +5,7 @@ class AuthorsController < ApplicationController
 	end
 
 	def show
+		@quotes = Quote.where(author: @author.author_name)
 	end
 
 	def new

@@ -1,9 +1,17 @@
-
-<h1> <%= @author.author_name %> </h1>
-<p>
+<br>
+<h1 align="center"> <%= @author.author_name %> </h1>
+<p style="max-width: 1000px; margin: auto;">
    <%= @author.description %>
 </p>
+<br>
+<div align="center">
+<a class="btn btn-info btn-lg" href="/authors/<%=@author.slug%>/edit">Edit</a> &ensp;
+<%= link_to 'Delete', "/authors/#{@author.slug}", method: :delete, class: "btn btn-danger btn-lg" %> &ensp;
+<a class="btn btn-secondary btn-lg" href="/authors">Back</a>
+</div>
+<br>
+<h2 align="center">Quotes</h2>
 
-<%= link_to 'Edit', "/authors/#{@author.slug}/edit" %> |
-<%= link_to 'Back', '/authors' %> | 
-<%= link_to 'Delete', "/authors/#{@author.slug}", method: :delete %> |
+<%= @quotes.each do |quote| %>
+	<p align="center"> <%= quote.text %> </p>
+<% end  %>

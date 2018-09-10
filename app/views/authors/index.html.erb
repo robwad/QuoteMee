@@ -1,14 +1,36 @@
-<h1>Authors</h1>
-
-
+<br>
+<br>
+<h1 align="center">Authors</h1>
+<br>
+<div align="center">
+<%= link_to 'New Author', new_author_path, class: "btn btn-info btn-lg" %> &ensp; <%= link_to 'Quotes', quotes_path, class: "btn btn-secondary btn-lg" %>
+</div>
+<br>
+<br />
+<br />
+<br />
+<br />
+<div class="row" style="max-width: 1300px; margin: auto;">
 <% @authors.each do |author| %>
-	<p><%= link_to "/authors/#{author.slug}" do %>
-	<%= author.author_name %>  <br /> <%= author.year_of_birth %> <br /> <%= author.birthplace %> <br />
-	<% end %>
-	</p>
+  <div class="col-sm-3">
+  	<a href="/authors/<%=author.slug%>">
+    <div class="card">
+<!--       <img class="card-img-top" src="assets/#{author.slug}.jpg" alt="Card image cap">
+ -->  <div class="card-body" align="center">
+        <h5 class="card-title"><%= author.author_name %></h5>
+        <p class="card-text">Born in <%= author.year_of_birth %> </p>
+      </div>
+      <div class="card-footer">
+      <small class="text-muted"> <%= author.birthplace %></small>
+      </div>
+    </div>
+    </a>
+  </div>
 <% end %>
-<br />
-<br />
-<br />
-<br />
-<%= link_to 'New Author', new_author_path %> | <%= link_to 'Quotes', quotes_path %>
+</div>
+
+
+
+
+
+<br>

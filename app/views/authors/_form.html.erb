@@ -1,27 +1,33 @@
-
+<div align="center">
 <%= form_for(author) do |form| %>
 	<div class="field">
-		<%= form.label :author_name %>
-		<%= form.text_field :author_name %>
+		<%= form.text_field :author_name, placeholder: "Author Name" %>
 	</div>
+	<br>
 	<div class="field">
-		<%= form.label :year_of_birth %>
-		<%= form.text_field :year_of_birth %>
+		<%= form.text_field :year_of_birth, placeholder: "Year of Birth" %>
 	</div>
+		<br>
+
 	<div class="field">
-		<%= form.label :birthplace %>
-		<%= form.text_field :birthplace %>
+		<%= form.text_field :birthplace, placeholder: "Birthplace" %>
 	</div>
+		<br>
+
 	<div class="field">
-		<%= form.label :description %>
-		<%= form.text_area :description %>
+		<%= form.text_area :description, placeholder: "Description" %>
 	</div>
+		<br>
+
 	<div class="field">
-		<%= form.label :slug %>
-		<%= form.text_field :slug %>
+		<%= form.text_field :slug, placeholder: "Slug" %>
 	</div>
+		<br>
+
 	<div>
-		<%= form.submit %>
+		<%= form.submit 'Create Author', :class => 'btn btn-lg btn-success' %>&ensp;
+		<a class="btn btn-secondary btn-lg" href="/authors">Back</a>
 	</div>
 
 <% end %>
+</div>
