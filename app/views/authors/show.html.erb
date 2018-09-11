@@ -12,6 +12,18 @@
 <br>
 <h2 align="center">Quotes</h2>
 
-<%= @quotes.each do |quote| %>
-	<p align="center"> <%= quote.text %> </p>
-<% end  %>
+
+<div class="card-columns" style="column-count: 4; margin: 30px;">
+  <% @quotes.each do |quote| %>
+      <a href="/quotes/<%= quote.id %>" class="card p-3" style="color: #4d4d4d;">
+        <blockquote class="blockquote mb-0 ">
+          <p class="text-center"><%= quote.text %></p>
+          <footer class="blockquote-footer text-right">
+            <small class="text-muted "> <%= quote.author %>
+            </small>
+          </footer>
+        </blockquote>
+      </a>
+  <% end %>
+</div>
+

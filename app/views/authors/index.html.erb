@@ -14,11 +14,11 @@
 <% @authors.each do |author| %>
   <div class="col-sm-3">
   	<a href="/authors/<%=author.slug%>">
-    <div class="card">
+    <div class="card" style="margin: 20px;">
 <!--       <img class="card-img-top" src="assets/#{author.slug}.jpg" alt="Card image cap">
- -->  <div class="card-body" align="center">
-        <h5 class="card-title"><%= author.author_name %></h5>
-        <p class="card-text">Born in <%= author.year_of_birth %> </p>
+ -->  <div class="card-body"  align="center">
+        <h5 class="card-title" ><%= author.author_name %></h5>
+        <p class="card-text" style="color: #4d4d4d;">Born in <%= author.year_of_birth %> </p>
       </div>
       <div class="card-footer">
       <small class="text-muted"> <%= author.birthplace %></small>

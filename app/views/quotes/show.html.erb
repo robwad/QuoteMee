@@ -11,4 +11,5 @@
 </p>
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
+<%= link_to 'Back', quotes_path %> |
+<%= link_to 'Destroy', @quote, method: :delete, data: { confirm: 'Are you sure?' } %>
