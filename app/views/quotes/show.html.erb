@@ -1,15 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @quote.author %>
-</p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @quote.text %>
-</p>
+<br>
+<br>
+<br>
+<div class="card" style="margin: 80px;">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0 text-center">
+      <p>  <%= @quote.text %></p>
+      <footer class="blockquote-footer text-right"><%= @quote.author %></footer>
+    </blockquote>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %> |
-<%= link_to 'Destroy', @quote, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div align="center">
+	<a class="btn btn-info btn-lg" href="/quotes/<%= @quote.id %>/edit">Edit</a> &ensp;
+	<%= link_to 'Destroy', @quote, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-lg" %>&ensp;
+    <a class="btn btn-secondary btn-lg" href="/quotes">Back</a>
+
+</div>
