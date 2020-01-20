@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :quotes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/', to: 'authors#index'
   get '/authors', to: 'authors#index'
   get '/authors/new', to: 'authors#new', as: 'new_author'
   get '/authors/:slug', to: 'authors#show'
